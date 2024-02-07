@@ -14,7 +14,7 @@ export const getNextDuel = async () => {
     service: "api",
     method: "GET",
     needAuth: false,
-    route: "/cats/duels",
+    route: "/cats/duel",
   });
 };
 
@@ -23,7 +23,7 @@ export const postDuel = async (winnerId, loserId) => {
     service: "api",
     method: "POST",
     needAuth: false,
-    route: "/cats/duels",
+    route: "/cats/duel",
     body: {
       winnerId,
       loserId,
