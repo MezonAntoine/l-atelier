@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 import { getNextDuel, postDuel } from "../../helpers/api.helper";
+
 export const useController = () => {
   const navigate = useNavigate();
 
@@ -22,12 +22,18 @@ export const useController = () => {
   };
 
   const onVote = async (winnerId, loserId) => {
-    // setAnimate(true);
-    // setAnimate(false);
     const res = await postDuel(winnerId, loserId);
+    setAnimate(true);
     if (res.status === 200) {
-      setDuel(res.content.data.nextDuel);
+      setTimeout(() => {
+        setAnimate(false);
+        setDuel(res.content.data.nextDuel);
+      }, 200);
+
+      return;
     }
+
+    setAnimate(false);
   };
 
   const onRanking = async () => {

@@ -9,6 +9,31 @@ export const MainContainer = styled(Container)`
   height: 100vh;
 `;
 
+export const StyledTitle = styled.p`
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 30px;
+  text-align: center;
+  margin: 30px 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
+`;
+
 export const StyledRow = styled(Row)`
   height: 100%;
 `;
@@ -36,6 +61,11 @@ export const StyledImage = styled(Image)`
   width: 300px;
   height: 300px;
   border-radius: 50% !important;
+  cursor: pointer;
+  @media (max-width: 600px) {
+    width: 150px;
+    height: 150px;
+  }
 `;
 
 export const StyledButtonsContainer = styled(Row)``;
@@ -78,6 +108,11 @@ export const StyledRankingButtonContainer = styled.button`
     background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
     background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
     text-decoration: none;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 12px;
+    width: 150px;
   }
 `;
 
