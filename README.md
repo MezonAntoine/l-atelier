@@ -7,6 +7,8 @@ This is a React.js project
 
 For run the project on local, launch the [back-end](https://github.com/MezonAntoine/l-atelier-back). 
 
+**node** >= 18
+
 RUN
 ```bash
   yarn 
