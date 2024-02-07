@@ -7,39 +7,11 @@ import {
   StyledImage,
   StyledCard,
   StyledCol,
+  StyledText,
 } from "./styles";
 
 export default () => {
   const { isLoading, cats } = useController();
-
-  // const renderPodium = () => {
-  //   const winners = cats.slice(0, 3);
-
-  //   return (
-  //     winners.length && (
-  //       <StyledPodium>
-  //         <StyledPodiumItem>
-  //           <StyledPodiumSecond>
-  //             <StyledImage src={winners[1].picture_url} />
-  //             <StyledPodiumRank>2</StyledPodiumRank>
-  //           </StyledPodiumSecond>
-  //         </StyledPodiumItem>
-  //         <StyledPodiumItem>
-  //           <StyledImage src={winners[0].picture_url} />
-  //           <StyledPodiumWinner>
-  //             <StyledPodiumRank>1</StyledPodiumRank>
-  //           </StyledPodiumWinner>
-  //         </StyledPodiumItem>
-  //         <StyledPodiumItem>
-  //           <StyledImage src={winners[2].picture_url} />
-  //           <StyledPodiumThreed>
-  //             <StyledPodiumRank>3</StyledPodiumRank>
-  //           </StyledPodiumThreed>
-  //         </StyledPodiumItem>
-  //       </StyledPodium>
-  //     )
-  //   );
-  // };
 
   const renderList = () => {
     return (
@@ -52,11 +24,15 @@ export default () => {
           return (
             <StyledCol key={index} xs={6} md={4} xxl={3}>
               <StyledCard>
-                <StyledImage src={cat.picture_url} />
+                <StyledImage
+                  src={cat.picture_url}
+                  alt="Cat image"
+                  loading="lazy"
+                />
                 {isUnranked ? (
-                  <p>Non classé</p>
+                  <StyledText>Non classé</StyledText>
                 ) : (
-                  <p>
+                  <StyledText>
                     {cat.number_of.victories > 1
                       ? `${cat.number_of.victories} Victoires`
                       : `${cat.number_of.victories} victoire`}
@@ -68,7 +44,7 @@ export default () => {
                     {cat.number_of.votes > 1
                       ? `${cat.number_of.votes} votes`
                       : `${cat.number_of.votes} vote`}
-                  </p>
+                  </StyledText>
                 )}
               </StyledCard>
             </StyledCol>

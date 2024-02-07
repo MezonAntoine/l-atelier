@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
-import { getNextDuel, getCats } from "../../helpers/api.helper";
+import { getCats } from "../../helpers/api.helper";
+
 export const useController = () => {
-  const navigate = useNavigate();
-
   const [isLoading, setIsLoading] = useState(true);
-  const [animate, setAnimate] = useState(false);
   const [cats, setCats] = useState([]);
 
   useEffect(() => {
