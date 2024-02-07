@@ -58,7 +58,7 @@ export default () => {
     <MainContainer>
       {isLoading ? null : (
         <div>
-          <StyledTitle>Classements des chats</StyledTitle>
+          <StyledTitle>Classement des chats</StyledTitle>
           {/* {renderPodium()} */}
           {renderList()}
         </div>
