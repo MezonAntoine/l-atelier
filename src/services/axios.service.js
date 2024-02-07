@@ -12,7 +12,6 @@ export const request = async (req) => {
     Accept: "application/json",
     "Content-Type": "application/json",
     "Cache-Control": "no-cache, no-store, must-revalidate",
-    allowaorigin: "Allowa-Loc",
   };
 
   const reqHeaders = {
