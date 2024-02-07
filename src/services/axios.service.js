@@ -2,7 +2,7 @@ import axios from "axios";
 
 const serviceBaseUrlMapping = {
   api:
-    process.env.NODE_ENV === "production"
+    (process.env.NODE_ENV === "production" ||  process.env.NODE_ENV === "staging")
       ? "https://l-atelier-test-back-end-d8e316542a74.herokuapp.com/"
       : process.env.REACT_APP_API_URL,
 };
