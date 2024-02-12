@@ -62,6 +62,7 @@ export const StyledImage = styled(Image)`
   height: 300px;
   border-radius: 50% !important;
   cursor: pointer;
+  object-fit: cover;
   @media (max-width: 600px) {
     width: 150px;
     height: 150px;
