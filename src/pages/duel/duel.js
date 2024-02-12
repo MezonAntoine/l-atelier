@@ -12,9 +12,8 @@ import {
   StyledTitle,
 } from "./styles";
 
-export default () => {
-  const { isLoading, duel, onVote, animate, onRanking, index } =
-    useController();
+const DuelPage = () => {
+  const { isLoading, duel, onVote, animate, onRanking } = useController();
 
   const transition = useSpring({
     config: { ...config.gentle, duration: 300 },
@@ -58,3 +57,5 @@ export default () => {
     </MainContainer>
   );
 };
+
+export default DuelPage;
